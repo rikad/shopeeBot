@@ -8,7 +8,12 @@ var page = false;
 
 //init
 async function init(callback) {
-    browser = await puppeteer.launch({headless: false, devtools: false }); // default is true
+    console.log(username)
+    console.log(password)
+    console.log(process.env.HEADLESS)
+    console.log(process.env.DEBUG)    
+
+    browser = await puppeteer.launch({headless: (process.env.HEADLESS == 'true'), devtools: (process.env.DEBUG == 'true') }); // default is true
     page = await browser.newPage();
     cookies = readCookies();
 
