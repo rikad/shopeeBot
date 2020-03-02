@@ -1,7 +1,8 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const username = 'insoendia';
-const password = 'Siliwangi1';
+require('dotenv').config()
+const username = process.env.USER;
+const password = process.env.PASSWORD;
 var browser = false;
 var page = false;
 
@@ -58,6 +59,8 @@ async function inputLogin(page) {
     var cookies = await page.cookies();
     saveCookies(cookies);
     console.log('Cookies Saved!');
+
+    await browser.close();
 }
 
 function saveCookies(cookies) {

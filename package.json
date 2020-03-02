@@ -12,6 +12,7 @@
     "autofollow"
   ],
   "dependencies": {
+    "dotenv": "^8.2.0",
     "puppeteer": "^2.1.1"
   }
 }

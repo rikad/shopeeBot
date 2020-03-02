@@ -1,3 +1,4 @@
 cookies.json
 followers.json
 node_modules/
+.env
