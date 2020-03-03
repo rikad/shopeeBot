@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const username = 'haliber' ;
-const password = '12345678';
+const username = 'insoendia';
+const password = 'Siliwangi1';
 var browser = false;
 var page = false;
 
@@ -65,6 +65,10 @@ function saveCookies(cookies) {
 }
 
 function readCookies() {
+   if(!fs.existsSync('cookies.json')) {
+        return false;
+   }
+
    var cookies = fs.readFileSync('cookies.json');
    if(cookies == null || cookies || undefined) {
        cookies = JSON.parse(cookies);
