@@ -2,7 +2,7 @@ const fs = require('fs');
 var shopee = require('./shopee.js');
 
 const target = 'https://shopee.co.id/shop/164971714/followers/';
-var s = 600;
+var s = 0;
 var n = 500;
 
 shopee(async function(page,browser) {
