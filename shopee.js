@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const username = 'haliber' ;
-const password = 'Haliber599';
+const password = '12345678';
 var browser = false;
 var page = false;
 
