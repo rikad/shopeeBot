@@ -5,7 +5,7 @@ const followPath = 'https://shopee.co.id/buyer/follow/shop/';
 shopee(async function(page,browser) {
     console.log('started ...');
     await page.goto(process.env.TARGET);
-    await page.waitForResponse('https://c-api-bit.shopeemobile.com/id/tr');
+    await page.waitFor(3000); //wait
     console.log('Page loaded!');
 
     var data = readFollowers();
